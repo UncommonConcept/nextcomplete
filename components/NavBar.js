@@ -21,6 +21,9 @@ const NavBar = () => (
                  <Link href="/air-conditioning-frisco-tx">
                     <a className="mdl-navigation__link">Frisco</a>
                  </Link>
+                  <Link href="/contact">
+                    <a className="mdl-navigation__link">Servie Request</a>
+                 </Link>
             </nav>
             </div>
         </header>
