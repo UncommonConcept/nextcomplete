@@ -1,19 +1,23 @@
 import { Form, Text } from 'react-form';
+import Router from 'next/router';
 
 
 export const myForm = (
   <Form
     onSubmit={(values) => {
       console.log('Success!', values)
-       //parameters: service_id, template_id, template_parameters
-        emailjs.init("user_D5kbXTXLkTOb9bE7CYoFW");
-        emailjs.send("default_service","template_pWhzP98u",{name: "James", notes: "Check this out!"});
-    }}
-    validate={({ name }) => {
-      return {
-        name: !name ? 'A name is required' : undefined
-      }
-    }}
+      //uncomment the below two lines to activate email delivery
+       // emailjs.init("user_D5kbXTXLkTOb9bE7CYoFW");
+      //  emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Check this out!"});
+        const href = '/about'
+      const as = href
+      Router.push(href, as, { shallow: true })
+          }}
+          validate={({ name }) => {
+            return {
+              name: !name ? 'A name is required' : undefined
+            }
+          }}
   >
     {({submitForm}) => {
       return (
@@ -23,6 +27,12 @@ export const myForm = (
           <Text field='date' placeholder = "date" />
           <Text field='time' placeholder = "time" />
           <Text field='issue' placeholder = "issue" />
+          <button
+                className="g-recaptcha"
+                data-sitekey="6LcIpxwUAAAAAHkLg5mAAnAmgL29crAbBFiGVqXW"
+                data-callback="YourOnSubmitFn">
+                Submit Captura
+                </button>
           <button type='submit'>Submit</button>
         </form>
       )
