@@ -12,10 +12,10 @@ const NavBar = () => (
             <Link className="mdl-layout-title" href="/"><span >Complete AC Air and Heat Services</span></Link>
             <div className="mdl-layout-spacer"></div>
             <nav className="mdl-navigation mdl-layout--large-screen-only">
-                  <Link href="/contact">
+                  <Link prefetch href="/contact">
                     <a className="mdl-navigation__link">Service Request</a>
                  </Link>
-                 <Link href="/about">
+                 <Link prefetch href="/about">
                     <a className="mdl-navigation__link">About</a>
                  </Link>
             </nav>

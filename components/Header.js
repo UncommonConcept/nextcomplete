@@ -14,6 +14,12 @@ const Header = () => (
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
           <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-blue.min.css"/>
           <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+          <script type="text/javascript" defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
+          {/*<script type="text/javascript">
+            (function(){
+                emailjs.init("user_D5kbXTXLkTOb9bE7CYoFW")
+            })();
+          </script>*/}
         </Head>
     </div>
 )

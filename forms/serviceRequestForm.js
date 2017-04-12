@@ -5,6 +5,9 @@ export const myForm = (
   <Form
     onSubmit={(values) => {
       console.log('Success!', values)
+       //parameters: service_id, template_id, template_parameters
+        emailjs.init("user_D5kbXTXLkTOb9bE7CYoFW");
+        emailjs.send("default_service","template_pWhzP98u",{name: "James", notes: "Check this out!"});
     }}
     validate={({ name }) => {
       return {
