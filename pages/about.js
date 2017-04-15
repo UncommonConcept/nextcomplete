@@ -18,8 +18,19 @@ Fusce eu ante sapien. Cras at egestas quam, a vulputate enim. Sed elementum vel 
 Fusce sollicitudin, tellus at luctus hendrerit, neque ex condimentum tellus, ut molestie mi quam gravida felis. In imperdiet purus vel massa consequat, non posuere velit euismod. Integer interdum purus id ullamcorper malesuada. Cras egestas sem sed enim faucibus auctor. Aenean aliquam lectus sagittis ante viverra, in pellentesque nunc volutpat. Cras ut urna eget enim iaculis maximus in ac mi. Aenean viverra porta nibh ac blandit. Suspendisse rhoncus sed dui eget euismod. Praesent pharetra id risus et lobortis. Quisque ut blandit mauris. Cras mollis lacus in nisl rhoncus egestas. Donec suscipit faucibus diam, eget rhoncus quam faucibus in. Nunc elementum ornare massa vitae fermentum.
 Suspendisse sit amet dapibus libero. Sed tincidunt arcu non tempor imperdiet. Aenean at tortor sollicitudin, semper turpis non, mattis eros. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac rhoncus lacus. Quisque ac risus et sapien tincidunt ultrices. Nulla a tincidunt neque. Aliquam viverra tempor neque, vitae commodo sapien pulvinar eu. Donec tempor at dolor et fermentum. Curabitur pharetra augue sed eros hendrerit suscipit. In porttitor id tortor vitae tincidunt. Curabitur dignissim ullamcorper purus a congue. Cras pellentesque, massa nec volutpat lobortis, nunc arcu ultricies velit, quis efficitur tortor lorem quis nisi.
        </div>
-       <div className="mdl-cell mdl-cell--6-col">is a licensed HVAC contractor and air conditioning company offering AC repair, Air Conditioning tune-up, and air conditioning replacement services in Southlake, TX, Keller, TX, Coppell, TX, Colleyville, TX, Grapevine, TX, Plano, TX, Fort Worth, TX, Arlington, TX, Frisco, TX, Dallas, TX, Addison, TX, Flower Mound, TX, Irving, TX, McKinney, TX, Arlington, TX, Euless, TX, Denton, TX, Highland Village, TX, Grand Prairie, TX, Westlake, TX, Farmers Branch, TX, Lewisville, TX and more. Call to confirm service for your home.
-           
+       <div className="mdl-cell mdl-cell--6-col">is a licensed HVAC contractor and air conditioning company offering AC repair, 
+           Air Conditioning tune-up, and air conditioning replacement services in Southlake, TX, Keller, TX, 
+           Coppell, TX, Colleyville, TX, 
+           Grapevine, TX, Plano, TX, 
+           Arlington, TX, Frisco, TX, Dallas, TX, Addison, TX, 
+           Flower Mound, TX, Irving, TX, McKinney, TX, 
+           Arlington, TX, Euless, TX, Denton, TX, 
+           Highland Village, TX, Grand Prairie, TX, 
+           Farmers Branch, TX, Lewisville, TX, Mesquite, Allen, Whylie, Garland, Sachse,
+           Richardson, Lucas, Parker, Princeton, Melissa, Little Elm, 
+           Rockwall, Rowlett, Murphy, Carrollton.
+            Call to confirm service for your home.
+
        </div>
        </div>
     </Layout>
