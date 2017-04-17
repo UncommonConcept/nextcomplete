@@ -7,8 +7,10 @@ const layoutStyle = {
 		//	backgroundRepeat:  repeat,
 		//	backgroundAttachment: fixed,
 //	 backgroundImage:{ resizeMode: 'cover'},
-
-
+}
+const backgroundImageStyle = {
+  resizeMode: 'cover',
+  opacity: 0.2,
 }
 
 const Layout = (props) => (
@@ -16,8 +18,8 @@ const Layout = (props) => (
     
     <Header />
     <NavBar />
-    <div id="background">
-      <img src="https://s3-us-west-2.amazonaws.com/completeair/service-ac-repair-big.jpg" class="stretch" alt="" />
+    <div id="background" style={backgroundImageStyle}>
+      <img src="https://s3-us-west-2.amazonaws.com/completeair/service-ac-repair-big.jpg" className="stretch" alt="" />
     </div>
     {props.children}
   </div>
