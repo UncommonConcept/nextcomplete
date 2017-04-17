@@ -27,7 +27,7 @@ export default () => (
           <li>
                 We repair and replace all makes and models, Repair or Design/replace duct systems, Air quality control & Hepa filtration systems, UV Lights & Ozone air scrubbers, solar attic ventilation, attic insulation, & radiant barrier
           </li>
-          </ol>
+        </ol>
       <PostLink id="hello-nextjs" title="Hello Next.js"/>
       <PostLink id="learn-nextjs" title="Learn Next.js is awesome"/>
       <PostLink id="deploy-nextjs" title="Deploy apps with Zeit"/>
