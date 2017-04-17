@@ -17,14 +17,16 @@ export default () => (
         <ol>
           <li>
             Solar Attic Ventilation is the state of the art in Ventilation .  it requires no electricity to operate only the self contained solar panel kit.  That means you save big $$$ by not needing an electric
-            </li>
-            <li>
+          </li>
+          <li>
               Attic Insulation make sure your home is insulated properly.   We offer fiberglass and cellulose insulation to insulate your home and make it the most efficient it can be !
-            </li>
-            <li>
-              FREE Estimates
+          </li>
+          <li>
               We repair and replace all makes and models, Repair or Design/replace duct systems, Air quality control &amp; Hepa filtration systems, UV Lights &amp;  Ozone air scrubbers, solar attic ventilation, attic insul
-              </li>
+          </li>
+          <li>
+                We repair and replace all makes and models, Repair or Design/replace duct systems, Air quality control & Hepa filtration systems, UV Lights & Ozone air scrubbers, solar attic ventilation, attic insulation, & radiant barrier
+          </li>
           </ol>
       <PostLink id="hello-nextjs" title="Hello Next.js"/>
       <PostLink id="learn-nextjs" title="Learn Next.js is awesome"/>
