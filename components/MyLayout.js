@@ -12,6 +12,7 @@ const backgroundImageStyle = {
   resizeMode: 'cover',
   opacity: 0.2,
   font: 'bold',
+  zIndex: 2,
 }
 
 const Layout = (props) => (
@@ -21,8 +22,8 @@ const Layout = (props) => (
     <NavBar />
     <div id="background" style={backgroundImageStyle}>
       <img src="https://s3-us-west-2.amazonaws.com/completeair/service-ac-repair-big.jpg" className="stretch" alt="" />
-    {props.children}
     </div>
+    {props.children}
   </div>
 )
 
