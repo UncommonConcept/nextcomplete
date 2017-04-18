@@ -12,25 +12,42 @@ const PostLink = (props) => (
 export default () => (
   <Layout>
     <h1>Complete Air and Heat Service - DFW  </h1>
-    <ul>
       <h2>Service</h2>
         <ol>
-          <li>
-            Solar Attic Ventilation is the state of the art in Ventilation .  it requires no electricity to operate only the self contained solar panel kit.  That means you save big $$$ by not needing an electric
-          </li>
-          <li>
+          <ul>
+            Solar Attic Ventilation is the state of the art in Ventilation .  it requires no electricity to operate only the self contained solar panel kit.  That means you save big $$$ by not needing an electrician and your savings start immediately.
+          </ul>
+          <ul>
               Attic Insulation make sure your home is insulated properly.   We offer fiberglass and cellulose insulation to insulate your home and make it the most efficient it can be !
-          </li>
-          <li>
+          </ul>
+          <ul>
               We repair and replace all makes and models, Repair or Design/replace duct systems, Air quality control &amp; Hepa filtration systems, UV Lights &amp;  Ozone air scrubbers, solar attic ventilation, attic insul
-          </li>
-          <li>
+          </ul>
+          <ul>
                 We repair and replace all makes and models, Repair or Design/replace duct systems, Air quality control & Hepa filtration systems, UV Lights & Ozone air scrubbers, solar attic ventilation, attic insulation, & radiant barrier
-          </li>
+          </ul>
         </ol>
-      <PostLink id="hello-nextjs" title="Hello Next.js"/>
-      <PostLink id="learn-nextjs" title="Learn Next.js is awesome"/>
-      <PostLink id="deploy-nextjs" title="Deploy apps with Zeit"/>
-    </ul>
+     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+              <i class="material-icons">play_circle_filled</i>
+            </header>
+            <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+              <div class="mdl-card__supporting-text">
+                <h4>Features</h4>
+                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
+              </div>
+              <div class="mdl-card__actions">
+                <a href="#" class="mdl-button">Read our features</a>
+              </div>
+            </div>
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
+              <i class="material-icons">more_vert</i>
+            </button>
+            <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
+              <li class="mdl-menu__item">Lorem</li>
+              <li class="mdl-menu__item" disabled>Ipsum</li>
+              <li class="mdl-menu__item">Dolor</li>
+            </ul>
+          </section>
   </Layout>
 )
