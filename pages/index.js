@@ -26,6 +26,17 @@ export default () => (
           <ul>
                 We repair and replace all makes and models, Repair or Design/replace duct systems, Air quality control & Hepa filtration systems, UV Lights & Ozone air scrubbers, solar attic ventilation, attic insulation, & radiant barrier
           </ul>
+          Air Conditioning tune-up, and air conditioning replacement services in Southlake, TX, Keller, TX, 
+           Coppell, TX, Colleyville, TX, 
+           Grapevine, TX, Plano, TX, 
+           Arlington, TX, Frisco, TX, Dallas, TX, Addison, TX, 
+           Flower Mound, TX, Irving, TX, McKinney, TX, 
+           Arlington, TX, Euless, TX, Denton, TX, 
+           Highland Village, TX, Grand Prairie, TX, 
+           Farmers Branch, TX, Lewisville, TX, Mesquite, Allen, Whylie, Garland, Sachse,
+           Richardson, Lucas, Parker, Princeton, Melissa, Little Elm, 
+           Rockwall, Rowlett, Murphy, Carrollton.
+            Call to confirm service for your home.
         </ol>
      <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
             <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
