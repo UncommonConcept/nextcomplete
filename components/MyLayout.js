@@ -1,5 +1,6 @@
 import Header from './Header'
 import NavBar from './NavBar'
+import { serviceRequestForm } from '../forms/serviceRequestForm';
 
 const layoutStyle = {
  //backgroundImage: 'url(https://s3-us-west-2.amazonaws.com/completeair/service-ac-repair-big.jpg)',
@@ -25,6 +26,7 @@ const Layout = (props) => (
       <img src="https://s3-us-west-2.amazonaws.com/completeair/service-ac-repair-big.jpg" className="stretch" alt="" />
     </div>
     {props.children}
+    {serviceRequestForm}
   </div>
 )
 

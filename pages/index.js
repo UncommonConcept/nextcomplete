@@ -23,9 +23,7 @@ export default () => (
       <ul>
         We repair and replace all makes and models, Repair or Design/replace duct systems, Air quality control &amp; Hepa filtration systems, UV Lights &amp;  Ozone air scrubbers, solar attic ventilation, attic insul
           </ul>
-      <ul>
-        We repair and replace all makes and models, Repair or Design/replace duct systems, Air quality control & Hepa filtration systems, UV Lights & Ozone air scrubbers, solar attic ventilation, attic insulation, & radiant barrier
-          </ul>
+     
       Air Conditioning tune-up, and air conditioning replacement services in Southlake, TX, Keller, TX,
            Coppell, TX, Colleyville, TX,
            Grapevine, TX, Plano, TX,

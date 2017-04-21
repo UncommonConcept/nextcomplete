@@ -2,7 +2,7 @@ import { Form, Text } from 'react-form';
 import Router from 'next/router';
 
 
-export const myForm = (
+export const serviceRequestForm = (
   <Form
     onSubmit={(values) => {
       console.log('Success!', values)
