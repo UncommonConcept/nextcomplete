@@ -2,6 +2,8 @@ import React from 'react';
 import { Head } from 'next/document';
 import stylesheet from 'assets/scss/pages/index.scss';
 
+// We can manage the meta tags too using
+// https://github.com/nfl/react-helmet
 export default () => {
   return (
     <Head>
