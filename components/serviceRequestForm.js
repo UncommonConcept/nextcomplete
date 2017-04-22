@@ -28,14 +28,14 @@ export const serviceRequestForm = (
           <Text className="form" field='name' placeholder = "name" />
           <Text field='email' placeholder = "email" />
           <div className ="form-group" >
-            <Text field='date' class="form-control" placeholder={moment().format('l')} />
             <Textarea field='issue' placeholder = "issue" rows="5" />
           </div>
-       
+  
   <DateField
-    dateFormat="MM-DD-YYYY"
-    defaultValue={moment()} 
+    dateFormat="MM-DD-YYYY HH:mm:ss"
+    value={moment().format('l')}
   />
+ 
           <button
                 className="g-recaptcha"
                 data-sitekey="6LcIpxwUAAAAAHkLg5mAAnAmgL29crAbBFiGVqXW"
