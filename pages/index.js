@@ -1,6 +1,7 @@
-import Layout from 'components/Layout.js';
+import Layout from 'components/Layout';
+import withFirebase from 'components/withFirebase';
 
-const index = () => (
+const index = ({ messages }) => (
     <Layout title='Plano McKinney Complete Air and Heat'>
       <h1>Complete Air and Heat Service - DFW </h1>
       <h2 className='example'>Service</h2>
@@ -27,8 +28,10 @@ const index = () => (
             Rockwall, Rowlett, Murphy, Carrollton.
               Call to confirm service for your home.
           </ol>
-
+          <div>
+            {JSON.stringify(messages)}
+          </div>
     </Layout>
 );
 
-export default index;
+export default withFirebase(index);
