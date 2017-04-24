@@ -1,5 +1,8 @@
-import { Form, Text } from 'react-form';
+import { Form, Text, Textarea } from 'react-form';
 import Router from 'next/router';
+import moment from 'moment';
+import 'react-date-picker/index.css';
+import { DateField, Calendar } from 'react-date-picker';
 
 
 export const serviceRequestForm = (
@@ -21,12 +24,18 @@ export const serviceRequestForm = (
   >
     {({submitForm}) => {
       return (
-        <form onSubmit={submitForm}>
-          <Text field='name' placeholder = "name" />
+        <form className="panel panel-default container fluid" onSubmit={submitForm}>
+          <Text className="form" field='name' placeholder = "name" />
           <Text field='email' placeholder = "email" />
-          <Text field='date' placeholder = "date" />
-          <Text field='time' placeholder = "time" />
-          <Text field='issue' placeholder = "issue" />
+          <div className ="form-group" >
+            <Textarea field='issue' placeholder = "issue" rows="5" />
+          </div>
+  
+  <DateField
+    dateFormat="MM-DD-YYYY HH:mm:ss"
+    value={moment().format('l')}
+  />
+ 
           <button
                 className="g-recaptcha"
                 data-sitekey="6LcIpxwUAAAAAHkLg5mAAnAmgL29crAbBFiGVqXW"

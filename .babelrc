@@ -5,7 +5,8 @@
         "root": ["."],
         "alias": {
           "assets": "./assets",
-          "components": "./components"
+          "components": "./components",
+          "server": "./server"
         },
         "cwd": "babelrc"
     }],
