@@ -1,4 +1,4 @@
-import { serviceRequestForm } from './serviceRequestForm';
+import { serviceRequestForm } from './serviceRequestForm/serviceRequestForm';
 import DocumentTitle from 'react-document-title';
 
 const layoutStyle = {

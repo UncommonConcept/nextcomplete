@@ -1,6 +1,6 @@
 import { Form, Text, Textarea } from 'react-form';
 import Router from 'next/router';
-import DatePicker from './serviceRequestForm/datepicker';
+import DatePicker from './datepicker';
 
 
 
