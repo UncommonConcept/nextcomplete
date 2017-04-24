@@ -1,11 +1,11 @@
 import { Form, Text, Textarea } from 'react-form';
 import Router from 'next/router';
-import moment from 'moment';
-import 'react-date-picker/index.css';
-import { DateField, Calendar } from 'react-date-picker';
+import DatePicker from './serviceRequestForm/datepicker';
+
 
 
 export const serviceRequestForm = (
+  <div>
   <Form
     onSubmit={(values) => {
       console.log('Success!', values)
@@ -30,12 +30,7 @@ export const serviceRequestForm = (
           <div className ="form-group" >
             <Textarea field='issue' placeholder = "issue" rows="5" />
           </div>
-  
-  <DateField
-    dateFormat="MM-DD-YYYY HH:mm:ss"
-    value={moment().format('l')}
-  />
- 
+            <DatePicker/>  
           <button
                 className="g-recaptcha"
                 data-sitekey="6LcIpxwUAAAAAHkLg5mAAnAmgL29crAbBFiGVqXW"
@@ -47,4 +42,5 @@ export const serviceRequestForm = (
       )
     }}
   </Form>
+  </div>
 )
