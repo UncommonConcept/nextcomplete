@@ -5,15 +5,18 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next dev",
+    "dev-next": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next"
+    "start-next": "next start",
+    "start": "NODE_ENV=production node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "next": "^2.0.0",
+    "path-match": "^1.2.4",
     "react": "^15.4.2",
     "react-document-title": "^2.0.3",
     "react-dom": "^15.4.2",

@@ -1,4 +1,3 @@
-import React from 'react';
 import Document, { Main, NextScript } from 'next/document';
 import DocumentTitle from 'react-document-title';
 import NavBar from 'components/NavBar';

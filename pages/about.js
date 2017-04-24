@@ -1,11 +1,9 @@
-import Layout from '../components/MyLayout.js';
+import Layout from '../components/Layout.js';
 import { aboutMatt, aboutService } from './content.js';
 
 const aboutStyle = {
   display: 'none',
 };
-
-
 
 export default () => (
     <Layout title='About Complete Air'>

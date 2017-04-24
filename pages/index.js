@@ -1,8 +1,8 @@
-import Layout from 'components/MyLayout.js';
 import Link from 'next/link';
+import Layout from 'components/Layout.js';
 
 const index = () => (
-  <Layout>
+  <Layout title='Plano McKinney Complete Air and Heat'>
     <h1>Complete Air and Heat Service - DFW </h1>
     <h2>Service</h2>
     <ol>
