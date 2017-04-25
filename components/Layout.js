@@ -7,7 +7,7 @@ const layoutStyle = {
 		//	backgroundRepeat:  repeat,
 		//	backgroundAttachment: fixed,
 //	 backgroundImage:{ resizeMode: 'cover'},
-  marginLeft: 50,
+  // marginLeft: 50,
 };
 
 const backgroundImageStyle = {
