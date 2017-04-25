@@ -23,7 +23,7 @@
     "next": "^2.2.0",
     "path-match": "^1.2.4",
     "react": "^15.4.2",
-    "react-date-picker": "^5.3.28",
+    "react-dates": "^10.1.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^15.4.2",
     "react-form": "^1.2.6"
