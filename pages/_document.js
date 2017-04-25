@@ -2,7 +2,6 @@
 import 'isomorphic-fetch';
 import Document, { Main, NextScript } from 'next/document';
 import DocumentTitle from 'react-document-title';
-import Script from 'react-load-script'
 import Head from 'components/Head';
 import NavBar from 'components/NavBar';
 import Footer from 'components/Footer';

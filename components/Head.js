@@ -16,14 +16,8 @@ export default () => {
       <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
       {/* if we extract the stylesheet instead of inlining. But I don't think we will do that.
        <link rel='stylesheet' href='/static/css/bundle.css' />*/}
+      {/* Due to how SSR works, this needs to be here in the header. It gets removed by the time bootstrap loads, otherwise. */}
       <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossOrigin="anonymous"></script>
-      {/*<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossOrigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossOrigin="anonymous"></script>
-      <script defer src="https://cdn.emailjs.com/dist/email.min.js"></script>
-      <script src='https://www.google.com/recaptcha/api.js'></script>
-      <script src='/static/holder.min.js'></script>
-      <script src='/static/ie10.js'></script>*/}
-      {/*<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->*/}
     </Head>
   );
 };

@@ -28,9 +28,9 @@ const linkStyle = {
 // );
 
 const NavBar = () => (
-  <nav className="navbar navbar-expand-md navbar-inverse fixed-top bg-inverse">
+  <nav className="navbar navbar-expand-md navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
     <Link prefetch className="navbar-brand" href="/"><a>Complete Air and Heat Service</a></Link>
-    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
 
