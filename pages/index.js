@@ -3,16 +3,10 @@ import withFirebase from 'components/withFirebase';
 
 const index = ({ services }) => (
     <Layout title='Plano McKinney Complete Air and Heat'>
-      <h1>Complete Air and Heat Service - DFW </h1>
+      <h1>Complete Air and Heat Service</h1>
 
       <div className="marketing">
         {/*<!-- Three columns of text below the carousel -->*/}
-
-
-
-
-
-
         <div className="row">
           <div className="col-lg-4">
             <img className="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" />
