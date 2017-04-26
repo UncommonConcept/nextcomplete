@@ -9,19 +9,19 @@ const index = ({ services }) => (
         {/*<!-- Three columns of text below the carousel -->*/}
         <div className="row">
           <div className="col-lg-4">
-            <img className="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" />
+            <img className="rounded-circle" src="https://s3-us-west-2.amazonaws.com/completeair/nj-air-conditioning-repair-service.jpg" alt="Generic placeholder image" width="140" height="140" />
             <h2>Repair and Replace</h2>
             <p> {services["Repair and Replace"]}</p>
             <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
           <div className="col-lg-4">
-            <img className="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" />
+            <img className="rounded-circle" src="https://s3-us-west-2.amazonaws.com/completeair/solarVentilation.jpeg" alt="Generic placeholder image" width="140" height="140" />
             <h2>Solar Attic Ventilation</h2>
             <p> {services["Solar Attic Ventilation"]}</p>
             <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
           <div className="col-lg-4">
-            <img className="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" />
+            <img className="rounded-circle" src="https://s3-us-west-2.amazonaws.com/completeair/atticInsulation.jpeg" alt="Generic placeholder image" width="140" height="140" />
             <h2>Attic Insulation</h2>
             <p> {services["Attic Insulation"]}</p>
             <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
