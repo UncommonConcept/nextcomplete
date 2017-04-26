@@ -5,6 +5,8 @@ import { emailJs } from '../../server/emailJsCredentials';
 
 
 
+
+
 export const serviceRequestForm = (
   <div>
   <Form
@@ -25,7 +27,7 @@ export const serviceRequestForm = (
   >
     {({submitForm}) => {
       return (
-        <form className="panel panel-default container fluid" onSubmit={submitForm}>
+        <form className="form-appointment" onSubmit={submitForm}>
           <Text className="form" field='name' placeholder = "name" />
           <Text field='email' placeholder = "email" />
           <div className ="form-group" >
