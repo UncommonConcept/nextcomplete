@@ -1,20 +1,44 @@
 import React from 'react'
 import { PureComponent } from 'react'
-import { DateField, Calendar } from 'react-date-picker';
+import PropTypes from 'prop-types';
+import momentPropTypes from 'react-moment-proptypes';
 import moment from 'moment';
+import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
 
-class DatePicker extends PureComponent {
-  render () {
-    return( 
-    <div>
-       <DateField
-            dateFormat="MM-DD-YYYY HH:mm:ss"
-            value={moment().format('l')}
-            />
-    </div>
-    )
+class SingleDatePickerRequest extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      focused: false,//props.autoFocus,
+      date: undefined,// props.initialDate,
+    };
+
+    this.onDateChange = this.onDateChange.bind(this);
+    this.onFocusChange = this.onFocusChange.bind(this);
+  }
+
+  onDateChange(date) {
+    this.setState({ date });
+  }
+
+  onFocusChange({ focused }) {
+    this.setState({ focused });
+  }
+
+  render() {
+    const { focused, date } = this.state;
+    return (
+      <SingleDatePicker
+          date={this.state.date} // momentPropTypes.momentObj or null
+          onDateChange={date => this.setState({ date })} // PropTypes.func.isRequired
+          focused={this.state.focused} // PropTypes.bool
+          onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
+/>
+    );
   }
 }
 
-export default DatePicker
+// DatePicker.propTypes = propTypes;
+// DatePicker.defaultProps = defaultProps;
 
+export default SingleDatePickerRequest;

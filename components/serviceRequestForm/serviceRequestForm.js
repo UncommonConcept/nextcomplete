@@ -1,6 +1,7 @@
 import { Form, Text, Textarea } from 'react-form';
 import Router from 'next/router';
 import DatePicker from './datepicker';
+import { emailJs } from '../../server/emailJsCredentials';
 
 
 
@@ -10,7 +11,7 @@ export const serviceRequestForm = (
     onSubmit={(values) => {
       console.log('Success!', values)
       //uncomment the below two lines to activate email delivery
-       // emailjs.init("user_D5kbXTXLkTOb9bE7CYoFW");
+       // emailjs.init(emailJs.userLogin);
       //  emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Check this out!"});
         const href = '/about'
       const as = href
@@ -30,10 +31,10 @@ export const serviceRequestForm = (
           <div className ="form-group" >
             <Textarea field='issue' placeholder = "issue" rows="5" />
           </div>
-            <DatePicker/>  
+            <DatePicker />  
           <button
                 className="g-recaptcha"
-                data-sitekey="6LcIpxwUAAAAAHkLg5mAAnAmgL29crAbBFiGVqXW"
+                data-sitekey={emailJs.siteCaptcha}
                 data-callback="YourOnSubmitFn">
                 Submit Captura
                 </button>
