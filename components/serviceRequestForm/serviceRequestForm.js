@@ -34,7 +34,7 @@ export const serviceRequestForm = (
             <DatePicker />  
           <button
                 className="g-recaptcha"
-                data-sitekey="6LcIpxwUAAAAAHkLg5mAAnAmgL29crAbBFiGVqXW"
+                data-sitekey={emailJs.siteCaptcha}
                 data-callback="YourOnSubmitFn">
                 Submit Captura
                 </button>
