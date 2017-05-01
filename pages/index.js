@@ -1,10 +1,10 @@
 import Layout from 'components/Layout';
 import withFirebase from 'components/withFirebase';
+import Link from 'next/link';
 
 const index = ({ services }) => (
     <Layout title='Plano McKinney Complete Air and Heat'>
       <h1>Complete Air and Heat Service</h1>
-
       <div className="marketing">
         {/*<!-- Three columns of text below the carousel -->*/}
         <div className="row">
@@ -24,11 +24,16 @@ const index = ({ services }) => (
             <img className="rounded-circle" src="https://s3-us-west-2.amazonaws.com/completeair/atticInsulation.jpeg" alt="Generic placeholder image" width="140" height="140" />
             <h2>Attic Insulation</h2>
             <p> {services["Attic Insulation"]}</p>
-            <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+
+
+        <div className="col-lg-4">
+          <Link prefetch href="/solar"><a>Solar </a></Link>
+          <Link href="/about" className="nav-link"><a>About</a></Link>
+        </div>
           </div>
         </div>
 
-        {/*<!-- START THE FEATURETTES -->*/}
+        {/*<!-- START THE FEATURETTES 
         <hr className="featurette-divider" />
 
         <div className="row featurette">
@@ -69,7 +74,7 @@ const index = ({ services }) => (
       </div>
 
       <div>
-        {JSON.stringify(services)}
+        {/*{JSON.stringify(services)}*/}
       </div>
     </Layout>
 );
