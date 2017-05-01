@@ -1,5 +1,5 @@
 import React from 'react'
-import { serviceRequestForm } from './serviceRequestForm';
+import ServiceRequestForm from './serviceRequestForm';
 
 
 
@@ -12,10 +12,9 @@ export default class extends React.Component {
   }
 
   render () {   
-      console.log("service reque", serviceRequestForm)
     return (
     <div>
-      {serviceRequestForm}
+      <ServiceRequestForm />
     </div>
     )
   }
