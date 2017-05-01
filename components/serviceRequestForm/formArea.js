@@ -11,13 +11,10 @@ export default class extends React.Component {
       : { userAgent: navigator.userAgent }
   }
 
-  onSubmit 
-  render () {
-    
+  render () {   
+      console.log("service reque", serviceRequestForm)
     return (
-
     <div>
-      Hello World {this.props.userAgent}
       {serviceRequestForm}
     </div>
     )

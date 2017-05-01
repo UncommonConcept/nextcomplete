@@ -15,9 +15,7 @@ export const serviceRequestForm = (
       //uncomment the below two lines to activate email delivery
        // emailjs.init(emailJs.userLogin);
       //  emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Check this out!"});
-        const href = '/about'
-      const as = href
-      Router.push(href, as, { shallow: true })
+
           }}
           validate={({ name }) => {
             return {
@@ -47,3 +45,24 @@ export const serviceRequestForm = (
   </Form>
   </div>
 )
+
+
+/*
+export default class extends React.Component {
+  static async getInitialProps ({ req }) {
+    return req
+      ? { userAgent: req.headers['user-agent'] }
+      : { userAgent: navigator.userAgent }
+  }
+
+  render () {   
+      console.log("service reque", serviceRequestForm)
+    return (
+    <div>
+      Hello World {this.props.userAgent}
+      {serviceRequestForm}
+    </div>
+    )
+  }
+}
+*/
