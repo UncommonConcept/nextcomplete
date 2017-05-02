@@ -18,13 +18,20 @@ class ServiceRequestForm extends PureComponent {
       super(props)
       this.state = {
         showForm: true,
+        date: undefined,
       };
       this.confirmPageSubmit = this.confirmPageSubmit.bind(this);
+      this.dateChange = this.dateChange.bind(this);
     }
+    
     confirmPageSubmit (values){
       this.props.confirmPage(values);
-      this.setState({showForm: !this.state.showForm});
-      
+      this.setState({showForm: !this.state.showForm}); 
+    }
+    
+    dateChange(date){
+      console.log("i am might date changeMADE IT", date);
+      this.setState({date:date})
     }
 
   render () {   
@@ -32,7 +39,7 @@ class ServiceRequestForm extends PureComponent {
      <div>
         <Form
           onSubmit={(values) => {
-            console.log('Success!', values)
+            console.log('Success!', values, this.state.date)
             this.confirmPageSubmit(values);
             //uncomment the below two lines to activate email delivery
              //emailjs.init(emailJs.userLogin);
@@ -54,7 +61,7 @@ class ServiceRequestForm extends PureComponent {
                 <div className ="form-group" >
                   <Textarea field='issue' placeholder = "issue" rows="5" />
                 </div>
-                  <DatePicker />  
+                  <DatePicker dateChange={this.dateChange}/>  
                 {/*<button
                       className="g-recaptcha"
                       data-sitekey={emailJs.siteCaptcha}
