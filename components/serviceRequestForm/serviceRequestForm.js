@@ -96,8 +96,9 @@ class RequestForm extends PureComponent {
       this.confirmPage = this.confirmPage.bind(this);
     }
 
-    confirmPage (){
-      console.log("i jusg cfrom request Formhanged", this.state)
+    confirmPage (values){
+      console.log("i jusg cfrom request Formhanged", this.state, values)
+
       this.setState({showForm: !this.state.showForm});
     }
 
