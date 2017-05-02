@@ -6,47 +6,75 @@ import withFirebase from 'components/withFirebase';
 import React from 'react'
 import { PureComponent } from 'react'
 
-const serviceRequestForm = (
-  <div>
-  <Form
-    onSubmit={(values) => {
-      console.log('Success!', values)
-      //uncomment the below two lines to activate email delivery
-       // emailjs.init(emailJs.userLogin);
-      //  emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Check this out!"});
+
+
+class ServiceRequestForm extends PureComponent {
+  static async getInitialProps ({ req }) {
+    return req
+      ? { userAgent: req.headers['user-agent'] }
+      : { userAgent: navigator.userAgent }
+  }
+  constructor (props) {
+      super(props)
+      this.state = {
+        showForm: true,
+      };
+      this.confirmPage = this.confirmPage.bind(this);
+    }
+    confirmPage (){
+      console.log("i jusg changed", this.state)
+      this.setState({showForm: !this.state.showForm});
       
-          }}
-          validate={({ name }) => {
-            return {
-              name: !name ? 'A name is required' : undefined
-            }
-          }}
-  >
-    {({submitForm}) => {
-      return (
-        <div>
-        <form className="form-appointment" onSubmit={submitForm}>
-          <Text className="form" field='name' placeholder = "name" />
-          <Text field='email' placeholder = "email" />
-          <div className ="form-group" >
-            <Textarea field='issue' placeholder = "issue" rows="5" />
+    }
+
+  render () {   
+    return (
+     <div>
+    <Form
+      onSubmit={(values) => {
+        console.log('Success!', values)
+        //uncomment the below two lines to activate email delivery
+        // emailjs.init(emailJs.userLogin);
+        //  emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Check this out!"});
+        
+            }}
+            validate={({ name }) => {
+              return {
+                name: !name ? 'A name is required' : undefined
+              }
+            }}
+    >
+      {({submitForm}) => {
+        return (
+          <div>
+          <form className="form-appointment" onSubmit={submitForm}>
+            <Text className="form" field='name' placeholder = "name" />
+            <Text field='email' placeholder = "email" />
+            <div className ="form-group" >
+              <Textarea field='issue' placeholder = "issue" rows="5" />
+            </div>
+              <DatePicker />  
+            {/*<button
+                  className="g-recaptcha"
+                  data-sitekey={emailJs.siteCaptcha}
+                  data-callback="YourOnSubmitFn">
+                  Submit Captura
+                  </button>
+                  */}
+            <button type='submit' onClick = {this.confirmPage}>Submit</button>
+          </form>
           </div>
-            <DatePicker />  
-          {/*<button
-                className="g-recaptcha"
-                data-sitekey={emailJs.siteCaptcha}
-                data-callback="YourOnSubmitFn">
-                Submit Captura
-                </button>
-                */}
-          <button type='submit'>Submit</button>
-        </form>
-        </div>
-      )
-    }}
-  </Form>
+        )
+      }}
+    </Form>
   </div>
-)
+    )
+  }
+}
+
+
+
+
 
 
 class RequestForm extends PureComponent {
@@ -63,10 +91,10 @@ class RequestForm extends PureComponent {
     }
 
   render () {   
-    
+    console.log('a',this.props)
     return (
       <div>
-            {this.state.showForm ? serviceRequestForm : null}
+            {this.state.showForm ? <ServiceRequestForm/> : null}
       </div>
     )
   }
