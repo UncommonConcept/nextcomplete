@@ -30,49 +30,53 @@ class ServiceRequestForm extends PureComponent {
   render () {   
     return (
      <div>
-    <Form
-      onSubmit={(values) => {
-        console.log('Success!', values)
-        //uncomment the below two lines to activate email delivery
-        // emailjs.init(emailJs.userLogin);
-        //  emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Check this out!"});
-        
-            }}
-            validate={({ name }) => {
-              return {
-                name: !name ? 'A name is required' : undefined
-              }
-            }}
-    >
-      {({submitForm}) => {
-        return (
-          <div>
-          <form className="form-appointment" onSubmit={submitForm}>
-            <Text className="form" field='name' placeholder = "name" />
-            <Text field='email' placeholder = "email" />
-            <div className ="form-group" >
-              <Textarea field='issue' placeholder = "issue" rows="5" />
-            </div>
-              <DatePicker />  
-            {/*<button
-                  className="g-recaptcha"
-                  data-sitekey={emailJs.siteCaptcha}
-                  data-callback="YourOnSubmitFn">
-                  Submit Captura
-                  </button>
-                  */}
-            <button type='submit' onClick = {this.confirmPage}>Submit</button>
-          </form>
+        <Form
+          onSubmit={(values) => {
+            console.log('Success!', values)
+            //uncomment the below two lines to activate email delivery
+            // emailjs.init(emailJs.userLogin);
+            //  emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Check this out!"});
+            
+                }}
+                validate={({ name }) => {
+                  return {
+                    name: !name ? 'A name is required' : undefined
+                  }
+                }}
+        >
+          {({submitForm}) => {
+            return (
+              <div>
+              <form className="form-appointment" onSubmit={submitForm}>
+                <Text className="form" field='name' placeholder = "name" />
+                <Text field='email' placeholder = "email" />
+                <div className ="form-group" >
+                  <Textarea field='issue' placeholder = "issue" rows="5" />
+                </div>
+                  <DatePicker />  
+                {/*<button
+                      className="g-recaptcha"
+                      data-sitekey={emailJs.siteCaptcha}
+                      data-callback="YourOnSubmitFn">
+                      Submit Captura
+                      </button>
+                      */}
+               
+              </form>
           </div>
-        )
-      }}
-    </Form>
-  </div>
-    )
-  }
+            )
+          }}
+        </Form>
+      </div>
+      )
+    }
 }
 
-
+const ThankYouConfirm=()=>{
+  return (
+    <div className = "form-appointment">Thank you</div>
+  )
+}
 
 
 
@@ -88,13 +92,24 @@ class RequestForm extends PureComponent {
       this.state = {
         showForm: true,
       };
+      this.confirmPage = this.confirmPage.bind(this);
+    }
+
+    confirmPage (){
+      console.log("i jusg cfrom request Formhanged", this.state)
+      this.setState({showForm: !this.state.showForm});
     }
 
   render () {   
     console.log('a',this.props)
     return (
       <div>
-            {this.state.showForm ? <ServiceRequestForm/> : null}
+            {this.state.showForm ? <ServiceRequestForm/> 
+             :null}
+           {this.state.showForm ? <button type='submit' onClick = {this.confirmPage}>Submit</button>
+             :null}
+             {!this.state.showForm ? <ThankYouConfirm/> : null}
+             
       </div>
     )
   }
