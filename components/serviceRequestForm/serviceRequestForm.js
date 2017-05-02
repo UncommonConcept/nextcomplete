@@ -19,6 +19,7 @@ class ServiceRequestForm extends PureComponent {
       this.state = {
         showForm: true,
       };
+      this.confirmPage = this.confirmPage.bind(this);
     }
     confirmPage (){
       console.log("i jusg changed", this.state)
