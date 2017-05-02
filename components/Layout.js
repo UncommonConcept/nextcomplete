@@ -15,7 +15,7 @@ const Layout = (props) => (
             Flower Mound, TX, Irving, TX, McKinney, TX,
             Arlington, TX, Euless, TX, Denton, TX,
             Highland Village, TX, Grand Prairie, TX,
-            Farmers Branch, TX, Lewisville, TX, Mesquite, Allen, Whylie, Garland, Sachse,
+            Farmers Branch, TX, Lewisville, TX, Mesquite, Allen, Wylie, Garland, Sachse,
             Richardson, Lucas, Parker, Princeton, Melissa, Little Elm,
             Rockwall, Rowlett, Murphy, Carrollton.</div>
     </div>
