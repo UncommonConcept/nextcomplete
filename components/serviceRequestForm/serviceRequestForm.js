@@ -5,7 +5,7 @@ import { emailJs } from '../../server/emailJsCredentials';
 
 
 
-export const serviceRequestForm = (
+const serviceRequestForm = (
   <div>
   <Form
     onSubmit={(values) => {
@@ -13,9 +13,7 @@ export const serviceRequestForm = (
       //uncomment the below two lines to activate email delivery
        // emailjs.init(emailJs.userLogin);
       //  emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Check this out!"});
-        const href = '/about'
-      const as = href
-      Router.push(href, as, { shallow: true })
+      
           }}
           validate={({ name }) => {
             return {
@@ -25,7 +23,88 @@ export const serviceRequestForm = (
   >
     {({submitForm}) => {
       return (
+        <div>
         <form className="panel panel-default container fluid" onSubmit={submitForm}>
+          <Text className="form" field='name' placeholder = "name" />
+          <Text field='email' placeholder = "email" />
+          <div className ="form-group" >
+            <Textarea field='issue' placeholder = "issue" rows="5" />
+          </div>
+            <DatePicker />  
+          {/*<button
+                className="g-recaptcha"
+                data-sitekey={emailJs.siteCaptcha}
+                data-callback="YourOnSubmitFn">
+                Submit Captura
+                </button>
+                */}
+          <button type='submit'>Submit</button>
+        </form>
+        </div>
+      )
+    }}
+  </Form>
+  </div>
+)
+
+
+export default class extends React.Component {
+  static async getInitialProps ({ req }) {
+    return req
+      ? { userAgent: req.headers['user-agent'] }
+      : { userAgent: navigator.userAgent }
+  }
+
+  render () {   
+    return (
+      <div>
+        <form className="form-appointment" >
+
+            {serviceRequestForm}
+          {/*<button
+                className="g-recaptcha"
+                data-sitekey={emailJs.siteCaptcha}
+                data-callback="YourOnSubmitFn">
+                Submit Captura
+                </button>*/}
+
+        </form>
+      </div>
+    )
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+export const serviceRequestForm = (
+  <div>
+  <Form
+    onSubmit={(values) => {
+      console.log('Success!', values)
+      //uncomment the below two lines to activate email delivery
+       // emailjs.init(emailJs.userLogin);
+      //  emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Check this out!"});
+
+          }}
+          validate={({ name }) => {
+            return {
+              name: !name ? 'A name is required' : undefined
+            }
+          }}
+  >
+    {({submitForm}) => {
+      return (
+        <form className="form-appointment" onSubmit={submitForm}>
           <Text className="form" field='name' placeholder = "name" />
           <Text field='email' placeholder = "email" />
           <div className ="form-group" >
@@ -45,3 +124,24 @@ export const serviceRequestForm = (
   </Form>
   </div>
 )
+
+
+/*
+export default class extends React.Component {
+  static async getInitialProps ({ req }) {
+    return req
+      ? { userAgent: req.headers['user-agent'] }
+      : { userAgent: navigator.userAgent }
+  }
+
+  render () {   
+      console.log("service reque", serviceRequestForm)
+    return (
+    <div>
+      Hello World {this.props.userAgent}
+      {serviceRequestForm}
+    </div>
+    )
+  }
+}
+*/

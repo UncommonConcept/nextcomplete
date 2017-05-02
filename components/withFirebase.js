@@ -7,14 +7,14 @@ export default function withFirebase(WrappedComponent) {
   return class extends Component {
     static async getInitialProps ({ req, query, renderPage }) {
       // Any other variables can be created as high-level props here
-      const snap = await req.firebaseServer.database().ref('messages').once('value');
-      return { messages: snap.val() };
+      const snap = await req.firebaseServer.database().ref('services').once('value');
+      return { services: snap.val() };
     }
 
     constructor (props) {
       super(props)
       this.state = {
-        messages: this.props.messages,
+        services: this.props.services,
       };
     }
 
@@ -24,13 +24,13 @@ export default function withFirebase(WrappedComponent) {
     }
 
     componentWillUnmount () {
-      firebase.database().ref('messages').off()
+      firebase.database().ref('services').off()
     }
 
     addDbListeners = () => {
-      firebase.database().ref('messages').on('value', snap => {
-        const messages = snap.val()
-        if (messages) { this.setState({ messages }); }
+      firebase.database().ref('services').on('value', snap => {
+        const services = snap.val()
+        if (services) { this.setState({ services }); }
       })
     }
 
@@ -50,8 +50,8 @@ export default function withFirebase(WrappedComponent) {
     // }
 
     render () {
-      const { messages } = this.state
-      return <WrappedComponent messages={messages} {...this.props} />
+      const { services } = this.state
+      return <WrappedComponent services={services} {...this.props} />
     }
   }
 }

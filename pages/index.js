@@ -1,34 +1,39 @@
 import Layout from 'components/Layout';
 import withFirebase from 'components/withFirebase';
+import Link from 'next/link';
 
-const index = ({ messages }) => (
+const index = ({ services }) => (
     <Layout title='Plano McKinney Complete Air and Heat'>
-      <h1>Complete Air and Heat Service - DFW </h1>
-
+      <h1>Complete Air and Heat Service</h1>
       <div className="marketing">
         {/*<!-- Three columns of text below the carousel -->*/}
         <div className="row">
           <div className="col-lg-4">
-            <img className="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" />
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <img className="rounded-circle" src="https://s3-us-west-2.amazonaws.com/completeair/nj-air-conditioning-repair-service.jpg" alt="Generic placeholder image" width="140" height="140" />
+            <h2>Repair and Replace</h2>
+            <p> {services["Repair and Replace"]}</p>
             <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
           <div className="col-lg-4">
-            <img className="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" />
-            <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            <img className="rounded-circle" src="https://s3-us-west-2.amazonaws.com/completeair/solarVentilation.jpeg" alt="Generic placeholder image" width="140" height="140" />
+            <h2>Solar Attic Ventilation</h2>
+            <p> {services["Solar Attic Ventilation"]}</p>
             <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
           <div className="col-lg-4">
-            <img className="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140" />
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <img className="rounded-circle" src="https://s3-us-west-2.amazonaws.com/completeair/atticInsulation.jpeg" alt="Generic placeholder image" width="140" height="140" />
+            <h2>Attic Insulation</h2>
+            <p> {services["Attic Insulation"]}</p>
+
+
+        <div className="col-lg-4">
+          <Link prefetch href="/solar"><a>Solar </a></Link>
+          <Link href="/about" className="nav-link"><a>About</a></Link>
+        </div>
           </div>
         </div>
 
-        {/*<!-- START THE FEATURETTES -->*/}
+        {/*<!-- START THE FEATURETTES 
         <hr className="featurette-divider" />
 
         <div className="row featurette">
@@ -69,7 +74,7 @@ const index = ({ messages }) => (
       </div>
 
       <div>
-        {JSON.stringify(messages)}
+        {/*{JSON.stringify(services)}*/}
       </div>
     </Layout>
 );
