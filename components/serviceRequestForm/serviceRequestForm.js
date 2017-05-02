@@ -2,8 +2,9 @@ import { Form, Text, Textarea } from 'react-form';
 import Router from 'next/router';
 import DatePicker from './datepicker';
 import { emailJs } from '../../server/emailJsCredentials';
-
-
+import withFirebase from 'components/withFirebase';
+import React from 'react'
+import { PureComponent } from 'react'
 
 const serviceRequestForm = (
   <div>
@@ -24,7 +25,7 @@ const serviceRequestForm = (
     {({submitForm}) => {
       return (
         <div>
-        <form className="panel panel-default container fluid" onSubmit={submitForm}>
+        <form className="form-appointment" onSubmit={submitForm}>
           <Text className="form" field='name' placeholder = "name" />
           <Text field='email' placeholder = "email" />
           <div className ="form-group" >
@@ -48,7 +49,7 @@ const serviceRequestForm = (
 )
 
 
-export default class extends React.Component {
+class RequestForm extends PureComponent {
   static async getInitialProps ({ req }) {
     return req
       ? { userAgent: req.headers['user-agent'] }
@@ -58,7 +59,7 @@ export default class extends React.Component {
   render () {   
     return (
       <div>
-        <form className="form-appointment" >
+   
 
             {serviceRequestForm}
           {/*<button
@@ -68,14 +69,13 @@ export default class extends React.Component {
                 Submit Captura
                 </button>*/}
 
-        </form>
+  
       </div>
     )
   }
 }
 
-
-
+export default RequestForm;
 
 
 
