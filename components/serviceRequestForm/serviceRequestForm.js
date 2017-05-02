@@ -42,8 +42,8 @@ class ServiceRequestForm extends PureComponent {
             console.log('Success!', values, this.state.date)
             this.confirmPageSubmit(values);
             //uncomment the below two lines to activate email delivery
-             //emailjs.init(emailJs.userLogin);
-             //emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Service Request "});
+            {/*emailjs.init(emailJs.userLogin);
+            emailjs.send("default_service","template_pWhzP98u",{name: values.name, email: values.email,  issue: values.issue, dateRequested: this.state.date['_d']});*/}
             
                 }}
                 validate={({ name }) => {
