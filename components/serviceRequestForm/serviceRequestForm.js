@@ -19,10 +19,10 @@ class ServiceRequestForm extends PureComponent {
       this.state = {
         showForm: true,
       };
-      this.confirmPage = this.confirmPage.bind(this);
+      this.confirmPageSubmit = this.confirmPageSubmit.bind(this);
     }
-    confirmPage (){
-      console.log("i jusg changed", this.state)
+    confirmPageSubmit (values){
+      this.props.confirmPage(values);
       this.setState({showForm: !this.state.showForm});
       
     }
@@ -33,9 +33,10 @@ class ServiceRequestForm extends PureComponent {
         <Form
           onSubmit={(values) => {
             console.log('Success!', values)
+            this.confirmPageSubmit(values);
             //uncomment the below two lines to activate email delivery
-            // emailjs.init(emailJs.userLogin);
-            //  emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Check this out!"});
+             //emailjs.init(emailJs.userLogin);
+             //emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Service Request "});
             
                 }}
                 validate={({ name }) => {
@@ -61,7 +62,7 @@ class ServiceRequestForm extends PureComponent {
                       Submit Captura
                       </button>
                       */}
-               
+                <button type='submit' >Submit</button>
               </form>
           </div>
             )
@@ -104,9 +105,10 @@ class RequestForm extends PureComponent {
     console.log('a',this.props)
     return (
       <div>
-        {this.state.showForm ? <ServiceRequestForm/> :null}
-        {this.state.showForm ? <button type='submit' onClick = {this.confirmPage}>Submit</button> :null}
-        {!this.state.showForm ? <ThankYouConfirm/> : null}    
+        {this.state.showForm ? <ServiceRequestForm confirmPage={this.confirmPage}/> :null}
+        {/*{this.state.showForm ? <button type='submit' onClick = {this.confirmPage}>Submit</button> :null}*/}
+        {!this.state.showForm ? <ThankYouConfirm/> : null}
+
       </div>
     )
   }
