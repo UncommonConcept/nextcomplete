@@ -20,6 +20,11 @@ class ServiceRequestForm extends PureComponent {
         showForm: true,
       };
     }
+    confirmPage (){
+      console.log("i jusg changed", this.state)
+      this.setState({showForm: !this.state.showForm});
+      
+    }
 
   render () {   
     return (
@@ -55,7 +60,7 @@ class ServiceRequestForm extends PureComponent {
                   Submit Captura
                   </button>
                   */}
-            <button type='submit'>Submit</button>
+            <button type='submit' onClick = {this.confirmPage}>Submit</button>
           </form>
           </div>
         )
@@ -85,7 +90,7 @@ class RequestForm extends PureComponent {
     }
 
   render () {   
-    console.log('a',ServiceRequestForm)
+    console.log('a',this.props)
     return (
       <div>
             {this.state.showForm ? <ServiceRequestForm/> : null}
