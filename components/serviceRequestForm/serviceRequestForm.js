@@ -13,9 +13,7 @@ const serviceRequestForm = (
       //uncomment the below two lines to activate email delivery
        // emailjs.init(emailJs.userLogin);
       //  emailjs.send("default_service","template_pWhzP98u",{name: "James",message_html: "Check this out!"});
-        const href = '/about'
-      const as = href
-      Router.push(href, as, { shallow: true })
+      
           }}
           validate={({ name }) => {
             return {
@@ -25,6 +23,7 @@ const serviceRequestForm = (
   >
     {({submitForm}) => {
       return (
+        <div>
         <form className="panel panel-default container fluid" onSubmit={submitForm}>
           <Text className="form" field='name' placeholder = "name" />
           <Text field='email' placeholder = "email" />
@@ -32,14 +31,16 @@ const serviceRequestForm = (
             <Textarea field='issue' placeholder = "issue" rows="5" />
           </div>
             <DatePicker />  
-          <button
+          {/*<button
                 className="g-recaptcha"
                 data-sitekey={emailJs.siteCaptcha}
                 data-callback="YourOnSubmitFn">
                 Submit Captura
                 </button>
+                */}
           <button type='submit'>Submit</button>
         </form>
+        </div>
       )
     }}
   </Form>

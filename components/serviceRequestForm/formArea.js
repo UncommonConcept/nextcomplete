@@ -10,11 +10,17 @@ export default class extends React.Component {
       ? { userAgent: req.headers['user-agent'] }
       : { userAgent: navigator.userAgent }
   }
+  constructor (props) {
+      super(props)
+      this.state = {
+        requestForm: true,
+      };
+    }
 
   render () {   
     return (
     <div>
-      <ServiceRequestForm />
+     {this.state.requestForm ?  <ServiceRequestForm /> : null}
     </div>
     )
   }
