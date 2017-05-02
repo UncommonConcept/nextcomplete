@@ -3,16 +3,32 @@ import withFirebase from 'components/withFirebase';
 // we may need to change this component to a class
 const useJumbotron = true;
 
+const sourceImages = [
+  'https://s3-us-west-2.amazonaws.com/completeair/service-ac-repair-big.jpg',
+  'https://s3-us-west-2.amazonaws.com/completeair2/hvac-ac-equipment.jpg',
+  'https://s3-us-west-2.amazonaws.com/completeair2/Small-AC-Units.jpg',
+];
+
+const backgroundImageStyle = {
+  resizeMode: 'cover',
+  opacity: 0.2,
+  font: 'bold',
+  zIndex: 2,
+};
+
 const Jumbotron = ({ messages }) => {
   if(!useJumbotron) return null;
 
   return (
-    <div className="jumbotron">
-      <div className="container">t
-        <img src="https://s3-us-west-2.amazonaws.com/completeair/Screen+Shot+2017-04-28+at+9.57.27+AM.png" alt="Smiley face" width="500" height="500"/>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a className="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-        <p>{messages}</p>
+    <div className="jumbotron-fluid">
+      <div className='container-fluid jumbotron-container'>
+        <img className='jumbotron-background' src={sourceImages[0]} alt="AC Promotional Content" />
+        <div className='jumbotron-content'>
+          <h1 class="display-3">Complete Air and Heat Service</h1>
+          <p class="lead">This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+          <p class="lead"><a className="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+          <p class="lead">{messages}</p>
+        </div>
       </div>
     </div>
   );

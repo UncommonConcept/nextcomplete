@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const index = ({ services }) => (
     <Layout title='Plano McKinney Complete Air and Heat'>
-      <h1>Complete Air and Heat Service</h1>
+
       <div className="marketing">
         {/*<!-- Three columns of text below the carousel -->*/}
         <div className="row">
@@ -33,7 +33,7 @@ const index = ({ services }) => (
           </div>
         </div>
 
-        {/*<!-- START THE FEATURETTES 
+        {/*<!-- START THE FEATURETTES
         <hr className="featurette-divider" />
 
         <div className="row featurette">

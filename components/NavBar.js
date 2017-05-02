@@ -6,9 +6,12 @@ const linkStyle = {
 };
 
 const NavBar = () => (
-  <nav className="navbar navbar-expand-md navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-    <img src="https://s3-us-west-2.amazonaws.com/completeair/Screen+Shot+2017-04-28+at+9.57.27+AM.png" alt="Smiley face" width="42" height="42"/>
-    <Link prefetch className="navbar-brand" href="/"><a>Complete Air and Heat Service</a></Link>
+  <nav className="navbar navbar-expand-md navbar-toggleable-md navbar-inverse fixed-top ac-navbar-bg">
+    <div className='navbar-brand-container'>
+      <img className="navbar-brand-logo" src="https://s3-us-west-2.amazonaws.com/completeair2/logo-only-sm.png" alt="Complete AC Logo" width="45" height="42"/>
+      <Link prefetch href="/"><a className="navbar-brand ">Complete Air and Heat</a></Link>
+    </div>
+
     <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>

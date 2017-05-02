@@ -1,0 +1,26 @@
+.ac-navbar-bg {
+  background-color: #FFF;
+  display: flex
+}
+
+.navbar-brand-container {
+  display: flex;
+
+  a.navbar-brand {
+    margin-left: 0.5em;
+    color: #0275d8;
+    display: flex;
+  }
+}
+
+.navbar-brand-logo {
+  height: 42px;
+  min-width: 45px;
+  max-width: 45px;
+}
+
+.navbar {
+  ul li.nav-item {
+    margin-right: 1em;
+  }
+}

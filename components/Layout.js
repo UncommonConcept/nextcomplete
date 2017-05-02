@@ -1,30 +1,14 @@
 import FormArea  from './serviceRequestForm/formArea';
 import DocumentTitle from 'react-document-title';
 
-const layoutStyle = {
- //backgroundImage: 'url(https://s3-us-west-2.amazonaws.com/completeair/service-ac-repair-big.jpg)',
-		//backgroundPosition: center,
-		//	backgroundRepeat:  repeat,
-		//	backgroundAttachment: fixed,
-//	 backgroundImage:{ resizeMode: 'cover'},
-  // marginLeft: 50,
-};
-
-const backgroundImageStyle = {
-  resizeMode: 'cover',
-  opacity: 0.2,
-  font: 'bold',
-  zIndex: 2,
-};
-
 const Layout = (props) => (
   <DocumentTitle title={props.title}>
-    <div style={layoutStyle}>
-      <div id="background" style={backgroundImageStyle}>
-        <img src="https://s3-us-west-2.amazonaws.com/completeair/service-ac-repair-big.jpg" className="stretch" alt="" />
-      </div>
+    <div className='layout-container'>
+
       {props.children}
+
       <FormArea />
+
       <div className = "bootstrap something">
         Complete AC and Heat is a licensed HVAC contractor and air conditioning company offering AC repair,
             Air Conditioning tune-up, and air conditioning replacement services in Southlake, TX, Keller, TX,
