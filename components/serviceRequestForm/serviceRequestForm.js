@@ -104,12 +104,9 @@ class RequestForm extends PureComponent {
     console.log('a',this.props)
     return (
       <div>
-            {this.state.showForm ? <ServiceRequestForm/> 
-             :null}
-           {this.state.showForm ? <button type='submit' onClick = {this.confirmPage}>Submit</button>
-             :null}
-             {!this.state.showForm ? <ThankYouConfirm/> : null}
-             
+        {this.state.showForm ? <ServiceRequestForm/> :null}
+        {this.state.showForm ? <button type='submit' onClick = {this.confirmPage}>Submit</button> :null}
+        {!this.state.showForm ? <ThankYouConfirm/> : null}    
       </div>
     )
   }
