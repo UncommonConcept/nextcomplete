@@ -17,24 +17,20 @@ class ServiceRequestForm extends PureComponent {
   constructor (props) {
       super(props)
       this.state = {
-        showForm: true,
         date: undefined,
       };
-      this.confirmPageSubmit = this.confirmPageSubmit.bind(this);
-      this.dateChange = this.dateChange.bind(this);
-    }
-    
-    confirmPageSubmit (values){
-      this.props.confirmPage(values);
-      this.setState({showForm: !this.state.showForm}); 
-    }
-    
-    dateChange(date){
-      console.log("i am might date changeMADE IT", date);
-      this.setState({date:date})
     }
 
-  render () {   
+    confirmPageSubmit = (values) => {
+      this.props.confirmPage(values);
+    }
+
+    dateChanged = (date) => {
+      console.log("i am might date changeMADE IT", date);
+      this.setState({date: date})
+    }
+
+  render () {
     return (
      <div>
         <Form
@@ -44,13 +40,13 @@ class ServiceRequestForm extends PureComponent {
             //uncomment the below two lines to activate email delivery
             {/*emailjs.init(emailJs.userLogin);
             emailjs.send("default_service","template_pWhzP98u",{name: values.name, email: values.email,  issue: values.issue, dateRequested: this.state.date['_d']});*/}
-            
-                }}
-                validate={({ name }) => {
-                  return {
-                    name: !name ? 'A name is required' : undefined
-                  }
-                }}
+          }}
+
+          validate={({ name }) => {
+            return {
+              name: !name ? 'A name is required' : undefined
+            }
+          }}
         >
           {({submitForm}) => {
             return (
@@ -61,7 +57,7 @@ class ServiceRequestForm extends PureComponent {
                 <div className ="form-group" >
                   <Textarea field='issue' placeholder = "issue" rows="5" />
                 </div>
-                  <DatePicker dateChange={this.dateChange}/>  
+                  <DatePicker dateChange={this.dateChanged}/>
                 {/*<button
                       className="g-recaptcha"
                       data-sitekey={emailJs.siteCaptcha}
@@ -100,23 +96,19 @@ class RequestForm extends PureComponent {
       this.state = {
         showForm: true,
       };
-      this.confirmPage = this.confirmPage.bind(this);
     }
 
-    confirmPage (values){
+    confirmPage = (values) => {
       console.log("i jusg cfrom request Formhanged", this.state, values)
 
-      this.setState({showForm: !this.state.showForm});
+      this.setState({showForm: false});
     }
 
-  render () {   
+  render () {
     console.log('a',this.props)
     return (
       <div>
-        {this.state.showForm ? <ServiceRequestForm confirmPage={this.confirmPage}/> :null}
-        {/*{this.state.showForm ? <button type='submit' onClick = {this.confirmPage}>Submit</button> :null}*/}
-        {!this.state.showForm ? <ThankYouConfirm/> : null}
-
+        {this.state.showForm ? <ServiceRequestForm confirmPage={this.confirmPage}/> : <ThankYouConfirm />}
       </div>
     )
   }
