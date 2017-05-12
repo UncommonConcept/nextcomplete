@@ -1,6 +1,6 @@
 @import 'normalize.css';
-@import 'react-date-picker/index.css';// 'datepicker.css';
-//@import 'react-dates/lib/css/_datepicker.css';
+// @import 'react-date-picker/index.css';// 'datepicker.css';
+@import 'react-dates/lib/css/_datepicker.css';
 
 $footer-height: 60px;
 
@@ -8,6 +8,7 @@ $footer-height: 60px;
 @import 'layout';
 @import 'navbar';
 @import 'footer';
+@import 'jumbotron';
 
 // Pages
 @import 'pages/index';

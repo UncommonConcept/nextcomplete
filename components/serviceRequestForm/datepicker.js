@@ -14,18 +14,16 @@ class SingleDatePickerRequest extends PureComponent {
       date: undefined,// props.initialDate,
     };
 
-   this.onDateChange = this.onDateChange.bind(this);
-   this.onFocusChange = this.onFocusChange.bind(this);
   }
 
-  onDateChange(date) {
-    this.setState({ date });
-    console.log("inside date change");
-  }
-
-  onFocusChange({ focused }) {
+  onFocusChanged = ({ focused }) => {
     this.setState({ focused });
     console.log("insideFOCUS change");
+  }
+
+  onDateChanged = (date) => {
+    this.setState({ date });
+    this.props.dateChange(date);
   }
 
   render() {
@@ -33,10 +31,10 @@ class SingleDatePickerRequest extends PureComponent {
     return (
       <SingleDatePicker
           date={this.state.date} // momentPropTypes.momentObj or null
-          onDateChange={date => this.setState({ date }) } // PropTypes.func.isRequired
+          onDateChange={this.onDateChanged} // PropTypes.func.isRequired
           focused={this.state.focused} // PropTypes.bool
-          onFocusChange={({ focused }) => this.setState({ focused })} // PropTypes.func.isRequired
-/>
+          onFocusChange={this.onFocusChanged} // PropTypes.func.isRequired
+      />
     );
   }
 }

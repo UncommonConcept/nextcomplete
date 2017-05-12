@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const index = ({ services }) => (
     <Layout title='Plano McKinney Complete Air and Heat'>
-      <h1>Complete Air and Heat Service</h1>
+
       <div className="marketing">
         {/*<!-- Three columns of text below the carousel -->*/}
         <div className="row">
@@ -12,13 +12,11 @@ const index = ({ services }) => (
             <img className="rounded-circle" src="https://s3-us-west-2.amazonaws.com/completeair/nj-air-conditioning-repair-service.jpg" alt="Generic placeholder image" width="140" height="140" />
             <h2>Repair and Replace</h2>
             <p> {services["Repair and Replace"]}</p>
-            <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
           <div className="col-lg-4">
             <img className="rounded-circle" src="https://s3-us-west-2.amazonaws.com/completeair/solarVentilation.jpeg" alt="Generic placeholder image" width="140" height="140" />
             <h2>Solar Attic Ventilation</h2>
             <p> {services["Solar Attic Ventilation"]}</p>
-            <p><a className="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
           </div>
           <div className="col-lg-4">
             <img className="rounded-circle" src="https://s3-us-west-2.amazonaws.com/completeair/atticInsulation.jpeg" alt="Generic placeholder image" width="140" height="140" />
@@ -33,7 +31,7 @@ const index = ({ services }) => (
           </div>
         </div>
 
-        {/*<!-- START THE FEATURETTES 
+        {/*<!-- START THE FEATURETTES
         <hr className="featurette-divider" />
 
         <div className="row featurette">
