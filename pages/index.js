@@ -22,12 +22,6 @@ const index = ({ services }) => (
             <img className="rounded-circle" src="https://s3-us-west-2.amazonaws.com/completeair/atticInsulation.jpeg" alt="Generic placeholder image" width="140" height="140" />
             <h2>Attic Insulation</h2>
             <p> {services["Attic Insulation"]}</p>
-
-
-        <div className="col-lg-4">
-          <Link prefetch href="/solar"><a>Solar </a></Link>
-          <Link href="/about" className="nav-link"><a>About</a></Link>
-        </div>
           </div>
         </div>
 
