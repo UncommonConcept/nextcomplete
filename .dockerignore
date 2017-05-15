@@ -2,3 +2,9 @@
     */temp*
     */*/temp*
     temp?
+    node_modules/
+public/
+.git/
+.gitignore
+LICENSE
+README.md
