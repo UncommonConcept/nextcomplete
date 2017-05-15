@@ -1,12 +1,20 @@
-FROM node:6-onbuild
-RUN mkdir -p /usr/src/app
+FROM node:0.12.7
+
+RUN npm install webpack -g
+
+WORKDIR /tmp
+COPY package.json /tmp/
+RUN npm config set registry http://registry.npmjs.org/ && npm install
+
 WORKDIR /usr/src/app
-COPY package.json /usr/src/app/
-RUN npm config set registry https://registry.npmjs.org/ && npm install
-RUN npm run build
-COPY . /usr/src/app
-# set the loglevel for npm with environment variable
+COPY . /usr/src/app/
+RUN cp -a /tmp/node_modules /usr/src/app/
 
-EXPOSE 3000
+RUN webpack
 
-#next specific build
+ENV NODE_ENV=production 
+ENV PORT=4000
+
+CMD [ "/usr/local/bin/node", "./server/server.js" ]
+
+EXPOSE 4000
