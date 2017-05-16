@@ -1,5 +1,7 @@
 FROM node:6-onbuild
 
+RUN npm install -g yarn
+
 # RUN mkdir -p /usr/src/app
 # WORKDIR /usr/src/app
 # COPY package.json /usr/src/app/
@@ -12,7 +14,7 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY package.json /usr/src/app/
-RUN npm install
+RUN yarn install
 
 # Bundle app source
 COPY . /usr/src/app
