@@ -19,6 +19,6 @@ COPY . /usr/src/app
 EXPOSE 3000
 
 #CMD [ "npm", "start" ]
-CMD ["./start.sh"]
+CMD ["\"./start.sh"]
 
 #next specific build - actually happens in the start.sh file
