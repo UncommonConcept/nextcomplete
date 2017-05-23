@@ -58,7 +58,12 @@
   display: block;
   clear: both;
 }
-
+.mt20 {
+	margin-top: 20px;
+}
+.serviceHeader {
+	color: #BD1021;
+}
 .form-appointment {
 	padding: 2em;
 	background-color:#0275d8;// rgb(239, 252, 239);
@@ -78,7 +83,7 @@
 	font-family: 'PT Sans', Arial, sans-serif;
 	font-size: 1.1em;
 	padding: .4em 1em;
-	margin: 0 0 .8em;
+	margin: 20 0 .8em;
 	width: 100%;
   box-shadow: 0 0 8px rgba(0,0,0,.08) inset;
 }
@@ -127,6 +132,10 @@
 
 .form-appointment .wpcf7-list-item-label {
 	color: rgb(130, 178, 136);
+}
+
+.submitButton{
+	margin-top: 20px;
 }
 
 span.wpcf7-list-item {

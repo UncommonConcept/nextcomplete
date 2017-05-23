@@ -38,8 +38,8 @@ class ServiceRequestForm extends PureComponent {
             console.log('Success!', values, this.state.date)
             this.confirmPageSubmit(values);
             //uncomment the below two lines to activate email delivery
-            {/*emailjs.init(emailJs.userLogin);
-            emailjs.send("default_service","template_pWhzP98u",{name: values.name, email: values.email,  issue: values.issue, dateRequested: this.state.date['_d']});*/}
+            {emailjs.init(emailJs.userLogin);
+            emailjs.send("default_service","template_pWhzP98u",{name: values.name, email: values.email,  issue: values.issue, dateRequested: this.state.date['_d']});}
           }}
 
           validate={({ name }) => {
@@ -51,13 +51,14 @@ class ServiceRequestForm extends PureComponent {
           {({submitForm}) => {
             return (
               <div>
-              <form className="form-appointment" onSubmit={submitForm}>
-                <Text className="form" field='name' placeholder = "name" />
-                <Text field='email' placeholder = "email" />
-                <div className ="form-group" >
-                  <Textarea field='issue' placeholder = "issue" rows="5" />
-                </div>
-                  <DatePicker dateChange={this.dateChanged}/>
+                  <form className="form-appointment" onSubmit={submitForm}>
+                    <h2 className="serviceHeader"> Service Request Form </h2>
+                      <Text className="form mt20" field='name' placeholder = "name" />
+                      <Text className="mt20" field='email' placeholder = "email" />
+                      <div className ="form-group mt20" >
+                        <Textarea field='issue' placeholder = "brief description of issue" rows="5" />
+                      </div>
+                        <DatePicker dateChange={this.dateChanged}/>
                 {/*<button
                       className="g-recaptcha"
                       data-sitekey={emailJs.siteCaptcha}
@@ -65,7 +66,9 @@ class ServiceRequestForm extends PureComponent {
                       Submit Captura
                       </button>
                       */}
-                <button type='submit' >Submit</button>
+                <div>
+                  <button type='submit' className="btn btn-success submitButton">Send Request</button>
+                </div>
               </form>
           </div>
             )
@@ -99,7 +102,7 @@ class RequestForm extends PureComponent {
     }
 
     confirmPage = (values) => {
-      console.log("i jusg cfrom request Formhanged", this.state, values)
+      // console.log("i jusg cfrom request Formhanged", this.state, values)
 
       this.setState({showForm: false});
     }

@@ -3,8 +3,8 @@ export default () => {
     <footer className="footer">
       <div className="container">
         <p>
-          &copy; Company 2017
-          <span className="text-muted">Place sticky footer content here.</span>
+          &copy; Complete Air and Heat 2017
+          <span className="text-muted"></span>
         </p>
       </div>
     </footer>
