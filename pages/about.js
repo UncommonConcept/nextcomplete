@@ -8,7 +8,7 @@ const aboutStyle = {
 
 const about = ({services}) => (
     <Layout title='About Complete Air'>
-        <h2>Complete Air and Heat</h2>
+        <h2></h2>
        <div className= "mdl-grid">
            <div className="mdl-cell mdl-cell--6-col">
                <img src={ 'https://s3-us-west-2.amazonaws.com/completeair/nj-air-conditioning-repair-service.jpg'}  width={200} height={200} />

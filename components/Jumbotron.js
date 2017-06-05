@@ -25,9 +25,10 @@ const Jumbotron = ({ messages }) => {
         <img className='jumbotron-background' src={sourceImages[0]} alt="AC Promotional Content" />
         <div className='jumbotron-content'>
           <h1 class="display-3">Complete Air and Heat Service</h1>
-          <p class="lead">This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-          <p class="lead"><a className="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-          <p class="lead">{messages}</p>
+          <p class="lead">is a licensed HVAC contractor and air conditioning company offering AC repair, Air Conditioning tune-up, and air conditioning replacement services
+              </p>
+          {/*<p class="lead"><a className="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+          <p class="lead">{messages}</p>*/}
         </div>
       </div>
     </div>
